@@ -1,0 +1,14 @@
+# typecasting + The process of converting a value of one date type to another
+#               (string,integer, float, boolean)
+#               Explicit vs Implicit
+
+# Explicit typecasting
+name = "Warrior"
+age = 30
+gpa = 4.0
+student = True
+
+print(type(name))
+print(type(age))
+print(type(gpa))
+print(type(student))
