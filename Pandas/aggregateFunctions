@@ -1,0 +1,44 @@
+""" 
+Aggregate Functions - Reduces a set of values into a single summary value
+                      Used to summarize and analyze data
+                      Often used with the groupby() function
+"""
+import pandas as pd
+
+
+df = pd.read_csv("pandadata.csv")
+
+
+#__________________________________ENTIRE DATAFRAME_____________________________
+#_________Mean_________
+print(df.mean(numeric_only=True))  # Mean of numeric columns
+
+#_________Sum_________
+print(df.sum(numeric_only=True))
+
+#_________Min_________
+print(df.min(numeric_only=True))
+
+#_________Max_________
+print(df.max(numeric_only=True))
+
+#_________Count_________
+print(df.count()) # Count of non-null values in each column
+
+#__________________________________SINGLE COLUMN_____________________________
+print(df["Height"].mean())  # Mean of the 'Height' column
+print(df["Weight"].sum())  # Sum of the 'Weight' column
+print(df["Age"].min())  # Minimum value in the 'Age' column
+print(df["Age"].max())  # Maximum value in the 'Age' column
+print(df["Name"].count())  # Count of non-null values in the 'Name' column  
+
+#__________________________________GROUPING DATA_____________________________
+group = df.groupby("Type1")  # Grouping data by the 'Type1' column
+print(group["Height"].mean())  # Mean of 'Height' for each group
+print(group["Weight"].sum())  # Sum of 'Weight' for each group
+print(group["Age"].min())  # Minimum value in 'Age' for each group
+print(group["Age"].max())  # Maximum value in 'Age' for each group
+print(group["Name"].count())  # Count of non-null values in 'Name' for each group
+
+
+

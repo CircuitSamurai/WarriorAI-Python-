@@ -1,0 +1,13 @@
+"""
+zip() - Combines multiple iterables (lists, tuples, sets, dict)
+        into a single iterator
+        Makes managing multiple indices easier
+"""
+
+names = ["Spongebob", "Patrick", "Squidward"]
+ages = [30, 35, 50]
+jobs = ["Cook", "unemployed", "Cashier"]
+data = zip(names, ages, jobs) # You can type cast zip tuple(zip(names, ages))
+
+for name, age, job in data:
+    print(f"{name} is a {age} year old {job}.")

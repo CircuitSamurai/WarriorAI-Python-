@@ -1,0 +1,11 @@
+import pandas as pd
+
+
+#_____________Reading a CSV file using pandas_____________
+df = pd.read_csv("pandadata.csv")
+# print(df)  Truncated output - print(df first few rows the the CSV file)
+print(df.to_string()) # prints the entire CSV file
+
+#_____________Reading a JSON file using pandas_____________
+# df = pd.read_json("pandadata.json")
+# print(df.to_string()) # prints the entire JSON file

@@ -1,0 +1,49 @@
+"""
+Function = def greet(name):
+    A function is a block of code which only runs when it is called.
+    """
+
+def happbday(name, age):
+    print("Happy Birthday to you!")
+    print("Happy Birthday to you!")
+    print(f"Happy Birthday dear {name}!")
+    print("Happy Birthday to you!")
+    print(f"You are now {age} years old!")
+    print()
+
+happbday("Alice", 30)
+happbday("Bob", 25)
+happbday("Charlie", 35)
+
+def add(x, y):
+    z = x + y
+    return z
+
+def subtract(x, y):
+    z = x - y
+    return z
+
+def multiply(x, y):
+    z = x * y
+    return z
+
+def divide(x, y):
+    if y == 0:
+        return "Error: Division by zero is not allowed."
+    z = x / y
+    return z
+
+print(add(1, 2))
+print(subtract(5, 3))
+print(multiply(4, 6))   
+print(divide(8, 2))
+print(divide(8, 0))
+
+def create_name(first, last):
+    first = first.capitalize()
+    last = last.capitalize()
+    return first + " " + last
+
+full_name = create_name("spongebob", "squarepants")
+
+print(full_name)

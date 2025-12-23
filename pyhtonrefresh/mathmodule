@@ -1,0 +1,44 @@
+import math
+
+#______________Augmented Assignment Operators_____________
+
+"""
+(friends = friends + 1) = (friends += 1)
+(friends = friends - 2) = (friends -= 2)
+(friends = friends * 3) = (friendss *= 3)
+(friends = friends / 2) = (friends /= 2)
+(friends = friends ** 2) = (friends **= 2)
+(friends = friends % 3) = (friends %= 3)
+"""
+
+#___________Built-In Functions____________________________
+x = 3.14
+y = -4
+z = 5
+"""
+result = round(x)
+result = abs(y)
+result = max (x,y,z)
+result = min (x,y,z)
+"""
+
+#______________Math Module (import math___________________
+"""
+math.pi - The mathematical constant π
+mathe.e - Euler's number e
+math.tau - The mathematical constant τ (tau), equal to 2π
+
+math.sqrt(x) - square root
+math.ceil(x) - rounds up to nearest interger
+math.floor(x) - rounds down to the nearest integer
+math.factorial(x) - returns factorial
+math.gcd(a, b) - greatest common divisor
+
+math.sin(x), math.cos(x), math.tan(x) - sin, cos, tan (in radians)
+math.degrees(x) - converts angle from radians to degrees
+math.radians(x) - canverts angle from degrees to radians
+
+math.exp(x) - e raised to power of x
+math.log(x, base) - Returns the logarithm of x with the specified base. If base is not provided, it defaults to the natural logarithm (base e).
+math.log10(x) - Returns the base-10 logarithm of x
+"""

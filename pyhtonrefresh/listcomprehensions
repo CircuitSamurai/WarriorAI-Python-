@@ -1,0 +1,42 @@
+"""
+List Comprehension = A concise way to create lists in Python
+                     Compact and easier to read than traditional loops
+                     [expression for valuie in iterable if condition]
+"""
+
+#Traditional Way of Creating a List
+"""doubles = []
+for x in range(1,11):
+    doubles.append(x * 2)
+
+print(doubles)
+""" 
+
+#Using List Comprehension
+    #doubles = {expression for value in iterable if condition}
+doubles = [x * 2 for x in range(1,11)] #list of doubles from 1 to 10
+triples = [y * 3 for y in range(1,11)] #list of triples from 1 to 10
+squares = [z *z for z in range(1,11)] #list of squares from 1 to 10
+
+print(doubles)
+print(triples)
+print(squares)
+
+#string comprehension
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+fruits = [fruit.upper() for fruit in fruits]
+fruit_chars = [fruit[0] for fruit in fruits]
+
+print(fruits)
+print(fruit_chars)
+
+#using conditionals in list comprehension
+numbers = [1, -2, 3, -4, 5, -6]
+positive_numbers = [num for num in numbers if num >= 0]
+
+print(positive_numbers)
+
+grades = [85, 92, 78, 90, 88]
+passing_grades = [grade for grade in grades if grade >= 60]
+
+print(passing_grades)

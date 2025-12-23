@@ -1,0 +1,20 @@
+import random
+
+low = 1
+high = 100
+
+guesses = 0
+
+number = random.randint(low, high)
+
+while True: 
+    guess = int(input(f"Guess a number between ({low} and {high}): "))
+    guesses += 1
+
+    if guess < number:
+        print(f"{guess} is too low. Try again.")
+    elif guess > number:
+        print(f"{guess} is too high. Try again.")
+    else:
+        print(f"Congratulations! You've guessed the number {number} in {guesses} attempts.")
+        break

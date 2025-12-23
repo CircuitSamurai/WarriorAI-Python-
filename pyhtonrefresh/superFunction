@@ -1,0 +1,44 @@
+"""
+super() = Function used in a child class to call methods from a parent class (superclass).
+          Allows you to extend the functionality of the inherited method.
+"""
+class Shape:
+    def __init__(self, color, filled):
+        self.color = color
+        self.filled = filled
+
+    def describe(self):
+        print(f"A {self.color} shape that is {'filled' if self.filled else 'not filled'}.")
+
+class Circle(Shape):
+    def __init__(self, color, filled, radius):
+        super().__init__(color, filled)
+        self.radius = radius
+
+    def describe(self):
+        print(f"It is a circle with an are of {3.14 * self.radius * self.radius}")
+        super().describe()
+
+class Square(Shape):
+    def __init__(self, color, filled, width):
+        super().__init__(color, filled)
+        self.width = width
+
+class Triangle(Shape):
+    def __init__(self, color, filled, base, height):
+        super().__init__(color, filled)
+        self.base = base
+        self.height = height
+
+
+circle = Circle("Red", True, 5)
+square = Square("Blue", False, 4)
+triangle = Triangle("Green", True, 3, 6)
+
+"""
+print(f"Circle: Color={circle.color}, Filled={circle.filled}, Radius={circle.radius}")
+print(f"Square: Color={square.color}, Filled={square.filled}, Width={square.width}")
+print(f"Triangle: Color={triangle.color}, Filled={triangle.filled}, Base={triangle.base}, Height={triangle.height}")\
+"""
+
+circle.describe()

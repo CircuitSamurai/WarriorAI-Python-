@@ -1,0 +1,22 @@
+""" ___________________Logical Operastors____________________
+    and = checks two or more conditions if True
+    or = checks two or more conditions if at least one is True
+    not = reverses the boolean value"""
+
+temp = 40
+sunny = True
+
+if temp > 0 and temp < 30:
+    print("The weather is good today")
+else:
+    print("The weather is bad today")
+
+if temp >= 31 or temp <= 75:
+    print("It is cold outside")
+else:
+    print("It is hot outside")
+
+if not sunny:
+    print("It is cloudy today")
+else:
+    print("It is sunny today")

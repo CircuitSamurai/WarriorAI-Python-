@@ -1,0 +1,28 @@
+#   Variable = A container for a value (string, integer, float, boolean)
+#              A variable behaves as if it was the value it contains
+
+#string
+first_name = "Warrior" 
+food = "alfredo"
+email = "ThisIsTheWay@fake.com"
+
+# f-string = an "f-string" (short for "formatted string literal") is a way to embed expressions inside string literals for formatting
+print(f"Hello {first_name}") 
+print(f"You like {food}")
+print(f"Your email is: {email}")
+
+# Integers
+age = 30
+quantity = 3
+print(f"You are {age}")
+
+# Float
+price = 10.99
+print(f"The price is : ${price}")
+
+# Boolean
+is_student = True
+if is_student:
+    print("You are a student")
+else:
+    print("You are NOT a student")

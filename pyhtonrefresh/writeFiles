@@ -1,0 +1,37 @@
+# Python writing files (.txt, .json, .csv)
+import json
+import csv
+
+
+employee = {
+    "name": "John Doe",
+    "age": 30,
+    "position": "Software Engineer"
+}
+
+txt_data = "I like Python"
+
+employees =[["Name", "Age", "Position"],
+            ["Batman", 35, "Hero"],
+            ["Superman", 40, "Hero"],
+            ["Wonder Woman", 38, "Hero"]]
+
+file_path = "C:\\Users\\camer\\OneDrive\\Desktop\\testfiledet\\output.json"
+
+"""
+with open(file_path, "w") as file:
+    file.write(txt_data)
+    print(f"Data written to {file_path}")
+"""
+
+"""
+with open(file_path, "w") as file:
+    json.dump(employee, file) #a dictionary or anything with output pairs is great for json
+    print(f"Data written to json file {file_path}")
+"""
+
+with open(file_path, "w") as file:
+    writer = csv.writer(file)
+    for row in employees:
+        writer.writerow(row)
+    print(f"Data written to csv file {file_path}")

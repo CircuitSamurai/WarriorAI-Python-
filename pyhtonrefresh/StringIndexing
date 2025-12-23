@@ -1,0 +1,22 @@
+""" Indexing = accessing elements of a string by their position 
+               [start : end : step]
+"""
+
+credit_cardnum = "1234-5678-9101-1121"
+
+print(credit_cardnum[0]) # prints 1st character
+print(credit_cardnum[0:4]) # prints characters from index 0 to 3
+print(credit_cardnum[5:9]) # prints characters from index 5 to 8
+print(credit_cardnum[:4]) # prints characters from start to index 3
+print(credit_cardnum[5:]) # prints characters from index 5 to end
+print(credit_cardnum[-4:]) # prints last 4 characters
+print(credit_cardnum[::2]) # prints every 2nd character
+print(credit_cardnum[::-1]) # prints string in reverse order
+print(credit_cardnum[-1::-1]) # prints string in reverse order
+print(credit_cardnum[::3]) # prints every 3rd character
+print(credit_cardnum[2:12:2]) # prints every 2nd character from index 2 to 11
+print(credit_cardnum[-1:-5:-1]) # prints last 4 characters in reverse order
+print(credit_cardnum[4::-1]) # prints characters from index 4 to start in reverse order
+print(credit_cardnum[10:4:-1]) # prints characters from index 10 to 5 in reverse order
+
+

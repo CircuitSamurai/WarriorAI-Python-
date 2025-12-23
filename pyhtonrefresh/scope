@@ -1,0 +1,15 @@
+# variable scope = where a variable is accessible within the code
+# scope resolution = LEGB - Local, Enclosing, Global, Built-in
+
+def func1():
+    a = 1 # local scope
+    print(a)  
+
+def func2():
+    b = 2 # local scope
+    print(b)
+
+x = 4 # global scope
+
+
+from math import sqrt  # built-in scope

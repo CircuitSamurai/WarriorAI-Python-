@@ -1,0 +1,19 @@
+""" Format Specifiers = {:flags} format a value based on the flag provided"""
+
+# .(number)f = formats a float to a specific number of decimal places
+# :(number) = allocate <number> spaces for the value
+# :03 = alocate and zero pad that many spaces
+# :< = left justify
+# :> = right justify
+# :^ = center align
+# := = places the sign to the leftmost position
+# :  = adds a space before positive numbers
+# :, = adds comma seperator
+
+price1 = 3.14159
+price2 = -987.65
+price3 = 12.34
+
+print(f"Price 1 is ${price1:.2f}") # formats to 2 decimal places
+print(f"Price 2 is ${price2:10}") # allocates 10 spaces
+print(f"Price 3 is ${price3:015}") # allocates 15 spaces and zero pads

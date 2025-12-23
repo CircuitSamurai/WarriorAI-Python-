@@ -1,0 +1,24 @@
+# For Loops = execute a block of code a fixed number of times
+
+"""
+for x in range(1, 11):  # loops from 1 to 10 (10 is excluded)
+    print(x)
+"""
+"""
+for x in reversed(range(1, 11)):  # loops from 10 to 1
+    print(x)
+print("Happy New Year!")
+"""
+
+"""
+credit_card = "1234-5678-9101-1121"
+
+for x in credit_card:
+    print(x)
+"""
+"""
+for x in range(1,21):
+    if x == 13:
+        break
+    else:
+        print(x)"""

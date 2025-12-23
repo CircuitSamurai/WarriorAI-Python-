@@ -1,0 +1,44 @@
+""" 
+multiple inheritance - inherit from more than one parent class
+                       C(A, B)
+multilevel inheritance - inherit from a parent which inherits from another parent
+                         C(B) <- B(A) <- A
+"""
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def eat(self):
+        print(f"{self.name} eats")
+    
+    def sleep(self):
+        print(f"{self.name} sleeps")
+
+class Prey(Animal):
+    def flee(self):
+        print(f"{self.name} flees")
+class Predator(Animal):
+    def hunt(self):
+        print(f"{self.name} hunts")
+
+class Rabbit(Prey):
+    pass
+
+class Hawk(Predator):
+    pass
+
+class Fish(Prey, Predator):
+    pass
+
+rabbit = Rabbit("Bugs")
+hawk = Hawk("Tony")
+fish = Fish("Nemo")
+
+rabbit.flee() 
+hawk.hunt()
+fish.flee()
+fish.hunt()
+
+rabbit.eat()
+fish.sleep()
+

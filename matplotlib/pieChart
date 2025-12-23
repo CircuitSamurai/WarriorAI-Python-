@@ -1,0 +1,16 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+catergories = ["Freshman", "Sophomores", "Juniors", "Seniors"] # strings don,t really benefit from np.arrays
+num_students = np.array([265, 300, 240, 310])
+colors = ["red", "yellow", "blue", "green"]
+
+plt.pie(num_students, labels=catergories,
+                      autopct="%1.2f%%", # use %% to add % to end
+                      colors=colors,
+                      explode=[0, 0, 0, 0.2], # displace piece of pie
+                      shadow=True, # add shadow
+                      startangle=90) # choose pie angle
+
+plt.title("WarriorAI College")
+plt.show()

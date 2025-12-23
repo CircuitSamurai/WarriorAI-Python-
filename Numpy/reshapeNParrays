@@ -1,0 +1,16 @@
+"""
+reshape() - changes the shape of an array
+            w/o altering its underlying data
+            .reshape(rows, columns)
+"""
+
+import numpy as np
+
+array = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+
+reshaped_array1 = array.reshape(4, 3)
+reshaped_array2= array.reshape(3, 2, 2)
+reshaped_array3 = array.reshape(-1, 1) # -1 means numpy will automatically calculate the value for that dimension
+print(reshaped_array1)
+print(reshaped_array2)
+print(reshaped_array3)

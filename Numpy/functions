@@ -1,0 +1,22 @@
+import numpy as np
+
+array1 = np.zeros((2, 3, 10))
+print(array1,)
+
+array2 = np.ones((2, 3, 10))
+print(array2)
+
+array3 = np.full((2, 3, 10), 5)
+print(array3)
+
+array4 = np.eye(5) #useful for linear algebra
+print(array4)
+
+array5 = np.empty((2, 3))
+print(array5)  # The values in the array will be random and depend on the memory state
+
+array6 = np.arange(0, 100, 2) #start, stop, step
+print(array6)
+
+array7 = np.linspace(0, 50, 6) #start, stop, number of points
+print(array7)

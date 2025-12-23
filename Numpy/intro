@@ -1,0 +1,12 @@
+import numpy as np
+
+array = np.array([1, 2, 3, 4, 5])
+array = array * 2
+print(array) # Output: [2, 4, 6, 8, 10]
+
+
+my_list = [1, 2, 3, 4, 5]
+
+my_list = my_list * 2
+
+print("look: ", my_list)  # Output: [1, 2, 3, 4, 5, 1, 2, 3, 4, 5]

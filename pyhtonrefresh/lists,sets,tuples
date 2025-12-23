@@ -1,0 +1,48 @@
+"""
+collection = single variable that can hold multiple values
+Types of collections:
+    1. Lists = [] ordered, changeable, allows duplicate members
+    2. Sets = {} unordered, unindexed, no duplicate members
+    3. Tuples = () ordered, unchangeable, allows duplicate members
+"""
+
+# Lists
+fruits = ["apple", "banana", "cherry", "apple"]
+print(fruits)  # prints the entire list
+print(fruits[0])  # prints the first item
+fruits[1] = "blueberry"  # change the second item
+fruits.append("orange")  # add an item to the end
+print(fruits)  # prints the modified list
+fruits.remove("apple")  # removes the first occurrence of "apple"
+print(fruits)  # prints the modified list
+
+# Sets
+vegetables = {"carrot", "broccoli", "spinach", "carrot"}
+print(vegetables)  # prints the set (duplicates removed)
+vegetables.add("kale")  # add an item to the set
+print(vegetables)  # prints the modified set
+vegetables.discard("broccoli")  # removes "broccoli" if it exists
+print(vegetables)  # prints the modified set
+
+# Tuples
+colors = ("red", "green", "blue", "red")
+print(colors)  # prints the entire tuple
+print(colors[1])  # prints the second item
+# colors[1] = "yellow"  # this will raise an error since tuples are immutable
+print(colors)  # prints the original tuple
+# Tuples can be converted to lists and back to modify
+colors_list = list(colors)
+colors_list[1] = "yellow"  # change the second item
+colors = tuple(colors_list)  # convert back to tuple
+print(colors)  # prints the modified tuple
+
+
+print(help(list)) # displays all methods available for lists
+print(help(set)) # displays all methods available for sets
+print(help(tuple)) # displays all methods available for tuples
+print(dir(list)) # displays all attributes and methods of lists
+print(dir(set)) # displays all attributes and methods of sets
+print(dir(tuple)) # displays all attributes and methods of tuples
+print (list.help) # displays all methods available for lists
+print (set.help) # displays all methods available for sets  
+print (tuple.help) # displays all methods available for tuples

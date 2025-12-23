@@ -1,0 +1,48 @@
+# Python Alarm Clock
+
+import time
+import datetime
+import winsound
+import sys
+
+def set_alarm(alarm_time):
+    print("Setting alarm for:", alarm_time)
+
+    sound_file = r"C:\Users\camer\Warrior AI\pyhtonrefresh\Nebula - The Grey Room _ Density & Time.wav"
+
+    try:
+        while True:
+            current_time = datetime.datetime.now().strftime("%H:%M:%S")
+            print(current_time, end="\r")
+
+            if current_time == alarm_time:
+                print("\n⏰ Time to wake up!")
+                winsound.PlaySound(
+                    sound_file,
+                    winsound.SND_FILENAME | winsound.SND_LOOP
+                )
+                break
+
+            time.sleep(1)
+
+    except KeyboardInterrupt:
+        print("\nAlarm stopped.")
+        winsound.PlaySound(None, winsound.SND_PURGE)
+        sys.exit()
+
+
+def valid_time(time_str):
+    try:
+        datetime.datetime.strptime(time_str, "%H:%M:%S")
+        return True
+    except ValueError:
+        return False
+
+
+if __name__ == "__main__":
+    alarm_time = input("Enter the alarm time (HH:MM:SS): ")
+
+    if valid_time(alarm_time):
+        set_alarm(alarm_time)
+    else:
+        print("❌ Invalid format. Use HH:MM:SS")

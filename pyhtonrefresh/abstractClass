@@ -1,0 +1,55 @@
+"""
+Abstractg class: A class that cannot be instantiated on its own and is meant to be subclassed.
+They can contain abstract methods, which are declared but have no implementation
+Abstract classes benefits:
+1. Prevents instantiation of the base class
+2. Requires children to use inherited abstract methods
+"""
+from abc import ABC, abstractmethod
+
+class Vehicle(ABC):
+    
+    @abstractmethod
+    def start_engine(self):
+        pass
+
+    @abstractmethod
+    def stop_engine(self):
+        pass
+
+# vehicle = Vehicle()  # This will raise an error
+
+class Car(Vehicle):
+    def start_engine(self):
+        print("Car engine started")
+
+    def stop_engine(self):
+        print("Car engine stopped")
+
+car = Car()
+car.start_engine()
+car.stop_engine()
+
+class Motorcycle(Vehicle):
+
+    def start_engine(self):
+        print("You ride the motorcycle")
+
+    def stop_engine(self):
+        print("You stopped the motorcycle")
+
+mortorcycle = Motorcycle()
+mortorcycle.start_engine()
+mortorcycle.stop_engine()
+
+class Boat(Vehicle):
+
+    def start_engine(self):
+        print("Boat engine started")
+
+    def stop_engine(self):
+        print("Boat engine stopped")
+
+boat = Boat()
+boat.start_engine() 
+boat.stop_engine()

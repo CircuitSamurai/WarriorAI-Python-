@@ -1,0 +1,35 @@
+""" 
+object = A "bundle" of related attributes (variables) and methods (functions)
+         Ex. phone, cup, book
+class = A blueprint used to design the structure and layout o9f an object
+        You need a class to create an object
+        Ex. Phone class, Cup class, Book class
+"""
+
+from car import Car  # importing the Car class from car module
+
+car1 = Car("Mustang", 2025, "Red", False) # creating an object of the Car class
+car2 = Car("Corrvette", 2024, "Blue", True) # creating another object of the Car class
+car3 = Car("Challenger", 2018, "Destroyer Grey", True) # creating another object of the Car class
+
+car1.drive()  # calling the drive method on car1 object
+car2.stop()   # calling the stop method on car2 object
+car3.drive()  # calling the drive method on car3 object
+car1.describe()  # calling the describe method on car1 object
+car2.describe()  # calling the describe method on car2 object
+car3.describe()  # calling the describe method on car3 object
+
+print(car1.model)  # Accessing object attributes
+print(car1.year)
+print(car1.color)
+print(car1.for_sale)
+
+print(car2.model)  # Accessing object attributes
+print(car2.year)    
+print(car2.color)
+print(car2.for_sale)
+
+print(car3.model)  # Accessing object attributes
+print(car3.year)
+print(car3.color)
+print(car3.for_sale)

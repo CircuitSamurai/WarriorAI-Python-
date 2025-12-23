@@ -1,0 +1,61 @@
+import random
+
+choices = ("rock", "paper", "scissors")
+user_score = 0
+comp_score = 0
+
+while True:
+    user = input("Enter rock, paper, or scissors (q to quit): ").lower()
+
+    if user == "q":
+        print ("Thanks for playing!")
+        break
+    elif user not in choices:
+        print("Invalid choice. Please try again.")
+        continue
+
+    comp = random.choice(choices)
+    print(f"Computer chose: {comp}")
+    
+
+    if user == comp:
+        print("It's a tie!")
+    elif (user == "rock" and comp == "scissors"):
+        user_score += 1
+        print("You win! Rock crushes scissors.")
+       
+
+    elif (user == "paper" and comp == "rock"):
+        user_score += 1
+        print("You win! Paper covers rock.")
+        
+
+    elif (user == "scissors" and comp == "paper"):
+        user_score += 1
+        print("You win! Scissors cut paper.") 
+        
+
+    else:
+        comp_score += 1
+        print("You lose! Better luck next time.")
+    
+    print(f"User score: {user_score} | Computer score: {comp_score}")
+        
+    while True:
+        cont = input("Do you want to play again? (y/n): ").lower()
+        if cont in ("y", "n"):
+            break
+        print("Invalid input. Please enter 'y' or 'n'.")
+
+    if cont == "n":
+        if user_score > comp_score:
+            print("Congratulations! You are the overall winner!")
+            print(f"Final Score - You: {user_score}, Computer: {comp_score}")
+        elif comp_score > user_score:
+            print("The computer is the overall winner! Better luck next time.")
+            print(f"Final Score - You: {user_score}, Computer: {comp_score}")
+        else:
+            print("It's an overall tie!")
+            print(f"Final Score - You: {user_score}, Computer: {comp_score}")
+        print("Thanks for playing!")
+        break

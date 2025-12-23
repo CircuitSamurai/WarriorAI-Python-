@@ -1,0 +1,39 @@
+"""
+Exception - An event that interrupts the normal flow of a program.
+Common built-in exceptions include:
+    - ZeroDivisionError → occurs when dividing by zero
+    - TypeError → occurs when an operation is applied to the wrong data type
+    - ValueError → occurs when a value is of the correct type but invalid
+
+Exception handling keywords:
+    1. try     → code that might cause an error
+    2. except  → code that runs if an error occurs
+    3. finally → code that runs no matter what (error or not)
+"""
+
+try:
+    # Ask the user for input and attempt to convert it to an integer
+    # This line may raise a ValueError if the input is not a number
+    number = int(input("Enter a number: "))
+    
+    # Attempt to divide 1 by the user-entered number
+    # This line may raise a ZeroDivisionError if number == 0
+    print(1 / number)
+
+except ZeroDivisionError:
+    # This block runs ONLY if division by zero occurs
+    print("You can't divide by zero!")
+
+except ValueError:
+    # This block runs if the input cannot be converted to an integer
+    print("Enter only numbers please!")
+
+except Exception:
+    # This is a catch-all block for any other unexpected exceptions
+    # It should usually be placed LAST
+    print("Something went wrong!")
+
+finally:
+    # This block always executes, whether an exception occurred or not
+    # Commonly used for cleanup actions (closing files, releasing resources)
+    print("Do some cleanup here")

@@ -1,0 +1,12 @@
+#Python reading files (.txt, .json, .csv)
+
+file_path = "C:\\Users\\camer\\OneDrive\\Desktop\\testfiledet\\output.txt"
+
+try:
+    with open(file_path, "r") as file:
+        content = file.read() # .json() - json.load(file) - .csv() - csv.reader(file)
+        print(content)
+except FileNotFoundError:
+    print("File not found at the specified path.")  
+except PermissionError:
+    print("Permission denied to read the file.")

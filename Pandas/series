@@ -1,0 +1,37 @@
+""" 
+Series - A pandas 1-Dimensional labeled array that can hold any data type
+         Think of it like a single column in a spreadsheet (1-Dimensional)
+"""
+import pandas as pd
+
+
+# Creating a Series from a list of data and assigning custom indices
+"""
+data = [100, 102, 103, 104, 105]
+
+series = pd.Series(data, index=["apartment 1", "apartment 2", "apartment 3", "apartment 4", "apartment 5"]) # index - labels for each value in the series
+
+series.loc["apartment 3"] = 106 # change the value at index "apartment 3" to 106
+
+print(series)
+print(series.loc["apartment 4"]) # loc - location based indexing
+print(series.iloc[0]) # iloc - integer position based indexing
+
+print(series[series > 102]) # filter series based on condition
+"""
+
+# Creating a Series from a dictionary of data
+"""calories = {"day 1": 420, "day 2": 380, "day 3": 390}
+
+series = pd.Series(calories)
+series.loc["day 2"] += 400
+
+
+print(series)
+print(series[series < 500]) # filter series based on condition
+"""
+
+#_________Exercise_________
+military_branches = ["Army", "Navy", "Air Force", "Marines", "Coast Guard"]
+series = pd.Series(military_branches, index=["USAR", "USN", "USAF", "USMC", "USCG"])
+print(series)

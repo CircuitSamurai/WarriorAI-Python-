@@ -1,0 +1,26 @@
+import pandas as pd
+
+# df = pd.read_csv("pandadata.csv")
+df = pd.read_csv("pandadata.csv", index_col="Name") # Setting the index column to "Name" - for easier access to rows by name
+ 
+# Selecting specific columns
+"""
+print(df["Name"].to_string())# print(df["Name"]) - Truncates the output
+print(df["Weight"].to_string())
+print(df[["Name", "Weight", "Height"]].to_string()) # Selecting multiple columns
+"""
+# Selecting specific rows
+"""
+print(df.loc["Charizard":"Blastoise", ["Height", "Weight"]])
+print("_________integer location_________")
+print(df.iloc[0:11:2, 0:3]) # Using integer location to select rows
+"""
+
+#_____________Exercise_____________
+
+pokemon = input("Enter the name of a Pokémon: ")
+
+try:
+    print(df.loc[pokemon])
+except KeyError:
+    print(f"{pokemon} is not in the dataset.")

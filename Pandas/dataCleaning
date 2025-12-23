@@ -1,0 +1,29 @@
+""" 
+Data Cleaning - Process of fixing/removing:
+                incomplete, incorrect, irrelevant, or duplicate data.
+                ~75% of work done with Pandas is Data Cleaning
+"""
+import pandas as pd
+
+df = pd.read_csv("pandadata.csv")
+
+#______________Drop irrelevant columns______________
+#df = df.drop(columns=["Legendary"])
+
+#________________Handle missing data________________
+# df = df.dropna(subset=["Type2"])
+# df = df.fillna(value={"Type2": "None"})
+
+#_______________Fix inconsistent values_____________
+#df["Type1"] = df["Type1"].replace({"Grass": "GRASS", "Fire": "FIRE", "Water": "WATER"})
+
+#__________________Standardize Text_________________
+#df["Name"] = df["Name"].str.lower()
+
+#__________________Fix Data Types___________________
+#df["Legendary"] = df["Legendary"].astype(bool)
+
+#_______________Remove Duplicate Values_____________
+df = df.drop_duplicates()
+
+

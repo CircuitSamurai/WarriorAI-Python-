@@ -1,0 +1,16 @@
+""" module = a file that contains code you want to include in your program
+             use 'import' to include a module (built-in on your own)
+             useful to break up a large program reusable separate files
+"""
+# print(help("modules"))  # displays information about modules
+import math  # built-in module
+import math  as m  # aliasing a module
+from math import pi # importing specific attribute from a module
+
+# creating a module
+"""
+save moidule as exampleMod.py - ensure .py extension
+import exampleMod
+result = exampleMod.pi
+print(result)
+"""

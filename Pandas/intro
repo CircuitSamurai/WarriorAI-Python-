@@ -1,0 +1,6 @@
+# Pandas - Panel Data Analysis (Pythons version of excel)
+
+import pandas as pd
+
+
+

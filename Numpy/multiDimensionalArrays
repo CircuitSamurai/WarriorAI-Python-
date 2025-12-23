@@ -1,0 +1,18 @@
+import numpy as np
+
+array= np.array([[['A', 'B', 'C'], ['D', 'E', 'F'], ['G', 'H', 'I']],
+                  [['J', 'K', 'L'], ['M', 'N', 'O'], ['P', 'Q', 'R']],
+                  [['S', 'T', 'U'], ['V', 'W', 'X'], ['Y', 'Z', ' ']]])
+ 
+print(array.ndim) # The number of dimensions of the array is 3.
+print(array.shape) # The shape of the array is (3, 3, 3).
+print(array.size) # The total number of elements in the array is 27.
+
+print(array[1, 2, 0]) # The element at the second layer, third row, and first column is 'P'. 
+
+word = array[0, 0, 0] + array[2, 0, 0] + array[1, 0, 1]
+word_2 = array[2, 0, 0] + array[1, 0, 2] + array[0, 1, 1] + array[0, 1, 1] + array[1, 2, 0]
+print(word) # The word formed by concatenating the elements at the first layer, first row, and first column, and the first layer, first row, and first column is 'SU'.
+print(word_2) # The word formed by concatenating the elements at the first layer, first row, and first column, and the second layer, first row, and third column, and the first layer, second row, and second column, and the first layer, second row, and second column, and the second layer, third row, and first column is 'VW'.
+
+# index - array[layer, row, column]

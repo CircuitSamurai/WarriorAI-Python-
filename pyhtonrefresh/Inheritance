@@ -1,0 +1,43 @@
+"""
+Inheritance - Allows a class to inherit attributes and methods from another class
+              Helps with code reusablility and extensibility
+              class child(Parent)
+"""
+
+class Animal:
+    def __init__(self, name):
+        self.name = name
+        self.is_alive = True
+    
+    def eat(self):
+        print(f"{self.name} is eating.")
+    
+    def sleep(self):
+        print(f"{self.name} is sleeping.")
+
+class Dog(Animal):  # Dog class inherits from Animal class
+    def bark(self):
+        print(f"{self.name} says Woof!")
+
+class Cat(Animal):
+    def meow(self):
+        print(f"{self.name} says Meow!")
+
+class Mouse(Animal):
+    def squeak(self):
+        print(f"{self.name} says Squeak!")
+
+dog = Dog("Scooby")
+cat = Cat("Garfield")
+mouse = Mouse("Jerry")
+
+dog.bark()  # calling method from Dog class
+dog.eat()    # calling inherited method from Animal class
+cat.meow()   # calling method from Cat class
+cat.sleep()  # calling inherited method from Animal class
+mouse.squeak()  # calling method from Mouse class
+mouse.eat()     # calling inherited method from Animal class
+mouse.sleep()   # calling inherited method from Animal class
+print(dog.name)   # Accessing inherited attribute from Animal class
+print(cat.name)   # Accessing inherited attribute from Animal class
+print(mouse.name) # Accessing inherited attribute from Animal class

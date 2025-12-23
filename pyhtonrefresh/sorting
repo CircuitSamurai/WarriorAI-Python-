@@ -1,0 +1,50 @@
+"""
+Sorting - .sort() or sorted()
+----- Lists[], Tuples(), Dictionaries{"":""}, objects
+"""
+
+#__________LISTS__________
+fruits = ["banana", "orange", "apple", "coconut"]
+numbers =[3, 5, 2, 4, 16, 1, 13]
+
+fruits.sort()
+numbers.sort()
+print(fruits)
+print(numbers)
+
+#__________TUPLES__________
+cars = ("mustang", "bronco", "corvette", "ferrari")
+
+cars = sorted(cars) #turns tuples into lists - - tuple(sorted(cars)) = type cast to tupple
+
+print(cars)
+
+#__________DICTIONARIES__________
+calories = {"pizza": 285,
+            "fries": 80,
+            "smoothie": 1500,
+            "Eggs": 90}
+
+#calories = dict(sorted(calories.items(), key=lambda item: item [0], reverse=True))
+#calories = dict(sorted(calories.items(), key=lambda item: item [1]))
+calories = dict(sorted(calories.items(), key=lambda item: item [1], reverse=True))
+print(calories)
+
+#__________OBJECTS__________
+class fruit:
+    def __init__(self, name, cals):
+        self.name = name
+        self.cals = cals
+    
+    def __repr__(self):
+        return f"{self.name}: {self.cals}"
+    
+fruit_obj = [fruit("banana", 110),
+             fruit("apple", 80),
+             fruit("orange", 75),
+             fruit("coconut", 92)]
+#fruit_obj = sorted(fruit_obj, key=lambda fruit: fruit.name)
+#fruit_obj = sorted(fruit_obj, key=lambda fruit: fruit.name, reverse=True)
+#fruit_obj = sorted(fruit_obj, key=lambda fruit: fruit.cals)
+fruit_obj = sorted(fruit_obj, key=lambda fruit: fruit.cals, reverse=True)
+print(fruit_obj)

@@ -1,0 +1,17 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+# Bar chart - daily consumptions of foods
+
+catergories = np.array(["Grains", "Fruit", "Vegetables", "Protein", "Dairy", "Sweets"])
+daily_servings = np.array([4, 3, 2, 5, 3, 1])
+
+plt.bar(catergories, daily_servings, color="red")
+# plt.barh(catergories, daily_servings, color="red") - plt.barh = horizontal bar chart
+
+plt.title("Daily Consumption")
+plt.xlabel("Food")
+plt.ylabel("Servings")
+
+plt.show()

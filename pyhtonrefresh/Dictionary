@@ -1,0 +1,35 @@
+""" 
+Dictionary in Python is an unordered collection of data values used to store data values like a map, 
+which unlike other Data Types that hold only single value as an element, Dictionary holds key:value pairs.
+A key:value pair is a set of two values, one which is the Key and the other is the Value.
+Dictionaries are written with curly brackets, and they have keys and values.
+"""
+
+capitals = {"USA": "Washington, D.C.",
+            "France": "Paris",
+            "Japan": "Tokyo",
+            "India": "New Delhi"}
+
+"""
+print(capitals)  # prints the entire dictionary
+
+print(capitals["France"])  # prints the value for the key "France"
+
+capitals["Germany"] = "Berlin"  # adds a new key-value pair
+print(capitals)  # prints the modified dictionary
+
+print(capitals.get("Japan"))  # prints the value for the key "Japan"
+
+capitals.update({"USA": "Washington"})  # updates the value for the key "USA"
+print(capitals)  # prints the modified dictionary
+
+capitals.pop("India")  # removes the key-value pair for "India"
+print(capitals)  # prints the modified dictionary
+
+print(capitals.keys())  # prints all the keys in the dictionary
+print(capitals.values())  # prints all the values in the dictionary
+print(capitals.items())  # prints all key-value pairs in the dictionary
+
+print(help(dict))  # displays all methods available for dictionaries
+print(dir(dict))  # displays all attributes and methods of dictionaries
+"""

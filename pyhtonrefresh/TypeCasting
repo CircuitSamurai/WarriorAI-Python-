@@ -1,0 +1,28 @@
+# typecasting + The process of converting a value of one date type to another
+#               (string,integer, float, boolean)
+#               Explicit vs Implicit
+
+# Explicit typecasting
+name = "Warrior"
+age = 30
+age2 = 31
+gpa = 4.0
+student = True
+
+age =float(age) # Explicit
+gpa = int(gpa) # Explicit
+age = bool(age2) # Explicit - converting an integer to a boolean will always be true if the value is greater than 0.
+name = bool(name) # Explicit - if the strring was empty ("") it would be false.
+
+
+print(type(name)) # type() = tells the type of variable
+print(type(age))
+print(type(gpa))
+print(type(student))
+
+# Implicit - automatically converts data type
+x = 2
+y = 2.0
+x = x / y
+
+print(x)

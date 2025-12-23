@@ -1,0 +1,63 @@
+
+
+"""name = input("Enter your full name: ")
+phone_number = ("Enter your phone number (XXX-XXX-XXXX): ")
+"""
+
+# len() = function that returns the length of a string
+    #result = len(name) 
+    
+# find() = function that returns the index of the first occurrence of a substring in a string    
+    #result = name.find("o") 
+
+# rfind() = function that returns the index of the last occurrence of a substring in a string
+    #result = name.rfind("o")
+
+# capitalize() = function that capitalizes the first character of a string
+    #name = name.capitalize()
+
+# upper() = function that converts all characters in a string to uppercase
+    #name = name.upper()
+
+# lower() = function that converts all characters in a string to lowercase
+    #name = name.lower()
+
+# isdigit() = function that checks if all characters in a string are digits
+    #result = name.isdigit()
+
+# isalpha() = function that checks if all characters in a string are alphabetic
+    #result = name.isalpha()
+
+# count() = function that counts the number of occurrences of a substring in a string
+    #result = phone_number.count("-")
+
+# replace() = function that replaces occurrences of a substring with another substring
+    #phone_number = phone_number.replace("-", " ")
+
+# print(help(str)) # help() = function that provides information about a module, function, class, or method
+
+# ______________________Exercise______________________
+# Validate user input
+# 1. username is no more than 12 characters
+# 2. username contains no spaces
+# 3. username must not contain any digits
+
+username = input("Enter a Username: ")
+
+if len(username) > 12:
+    print("Error : Username must be no more than 12 characters.")
+elif not username.find(" ") == -1:
+    print("Error : Username must not contain spaces.")  
+elif not username.isalpha():
+    print("Error : Username must not contain digits.")
+else:
+    print(f"Welcome, {username}!")
+    print("Your username is valid.")
+
+
+
+
+
+
+
+

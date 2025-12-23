@@ -1,0 +1,30 @@
+# Credit Card Validator in Python
+
+sum_odd_places = 0
+sum_even_places = 0
+total = 0
+
+credit_card_number = input("Enter your credit card number: ") # prompt user for credit card number
+credit_card_number = credit_card_number.replace("-", "").replace(" ", "") # remove dashes and spaces
+credit_card_number = credit_card_number[::-1]  # reverse the credit card number
+
+for x in credit_card_number [::2]: # sum of odd place digits
+    sum_odd_places += int(x) 
+
+for x in credit_card_number [1::2]: # sum of even place digits
+    x = int(x) * 2
+    if x >= 10:
+        sum_even_places += (1 + (x % 10)) # add digits of the product if >= 10
+    else:
+        sum_even_places += x
+
+total = sum_odd_places + sum_even_places
+
+if total % 10 == 0:
+    print("Valid credit card number")
+else:
+    print("Invalid credit card number")
+
+
+
+

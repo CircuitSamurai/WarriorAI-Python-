@@ -1,0 +1,43 @@
+"""
+Decorator:
+- A function that extends the behavior of another function
+- Does NOT modify the base function directly
+- The base function is passed as an argument to the decorator
+"""
+
+# Decorator that adds sprinkles behavior
+def add_sprinkles(function):
+
+    # Wrapper function replaces the original function
+    def wrapper(*args, **kwargs):
+        # Extra behavior added BEFORE the base function runs
+        print("*You add sprinkles 🧁*")
+
+        # Call the original function
+        function(*args, **kwargs)
+
+    # Return the wrapper instead of the original function
+    return wrapper
+
+
+# Decorator that adds fudge behavior
+def add_fudge(function):
+
+    def wrapper(*args, **kwargs):
+        print("*You add fudge 🍫*")
+        function(*args, **kwargs)
+
+    return wrapper
+
+
+# Applying decorators
+# Order matters:
+# add_fudge runs first, then add_sprinkles
+@add_sprinkles
+@add_fudge
+def get_ice_cream(flavor):
+    print(f"Here is your {flavor} ice cream 🍦")
+
+
+# Calling the decorated function
+get_ice_cream("vanilla")

@@ -1,0 +1,59 @@
+"""
+*args = allows you to pass multiple non-key arguments ()
+**kwargs = allows you to pass multiple keyword-arguments
+        * or ** = unpacking operator
+        1.positional 2. default 3. keyword 4. ARBITRARY
+"""
+# ______________________*args Example_____________________
+
+def add(*args):
+    total = 0
+    for arg in args:
+        total += arg   
+    return total    
+
+print(add(1,2,3))
+
+def display_name(*args):
+    for arg in args:
+        print(arg, end=" ")
+
+display_name("Dr.", "Spongebob", "Harold", "Squarepants", "III")
+
+# ______________________**kwargs Example_____________________
+def print_address(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+print_address(street="123 Fake Street", city="Atlanta", state="GA", zip="30089")
+""" 
+Key = street=
+Value ="123 Fake Street"
+"""
+
+# __________________________EXERCISE___________________________
+def shipping_label(*args,**kwargs):
+    for arg in args:
+        print(arg, end=" ")
+    print()
+
+    for value in kwargs.values():
+        print(value, end=" ")
+    print()
+
+    if "apt" in kwargs:
+        print(f"{kwargs.get('street')}{kwargs.get('apt')} ")
+    elif "pobox" in kwargs:
+        print(f"{kwargs.get('street')}")
+        print(f"{kwargs.get('pobox')}")
+    else:
+        print(f"{kwargs.get('street')}")
+        
+    print(f"{kwargs.get('city')} {kwargs.get('state')} {kwargs.get('zip')}")
+
+shipping_label("Dr.", "Spongebob", "Squarepants", "III",
+               street="123 Fake Street", 
+               pobox="PO box #1001",
+               city="Atlanta", 
+               state="GA", 
+               zip="30089")

@@ -1,0 +1,26 @@
+"""
+Mebership Operators = used to test wether a value or variable is found in a sequence
+                      (string, list, tuple, set, or dictionary)
+                      1. in
+                      2. not in
+"""
+
+word = "APPLE"
+
+
+
+while True:
+    letter = input("Guess a leteer in the secret word: ").upper()
+
+    if letter not in word:
+        print(f"{letter} was not found")
+    else:
+        print(f"There is a {letter}")
+        break
+
+email = "warriorcode@gmail.com"
+
+if "@" in email and "." in email:
+    print("Valid Email")
+else:
+    print("Invalid Email")

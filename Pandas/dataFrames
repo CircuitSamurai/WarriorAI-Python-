@@ -1,0 +1,35 @@
+"""
+Data Frame - A tabular data structure with rows AND columns. (2 Dimensional)
+             Similar to a spreadsheet or SQL table.
+"""
+import pandas as pd
+
+data = {"Name": ["Batman", "Superman", "Wonder Woman", "Aquaman"],
+        "Age": [30, 35, 28, 40]
+}
+
+#Converting the data(dictionary) into a Data Frame
+df = pd.DataFrame(data, index=[1, 2, 3, 4])
+
+# Adding a new column to the Data Frame
+df["City"] = ["Gotham", "Metropolis", "Themyscira", "Atlantis"]
+
+# Adding a new row to the Data Frame
+new_row = pd.DataFrame([{"Name": "The Flash", "Age": 29, "City": "Central City"}, 
+                       {"Name": "Raven", "Age": 27, "City": "Underworld"}],
+                       index=[5, 6]) # Creating a new Data Frame for the new row
+
+df = pd.concat([df, new_row]) # Concatenating the new row to the existing Data Frame
+
+
+print("We are the Justice League")
+print(df)
+print("_________________________")
+
+""" Accessing specific rows and columns
+print(df.loc[2])# Accessing the row with index 2
+print(df.iloc[3])# Accessing the row with index 3
+"""
+
+
+

@@ -1,0 +1,40 @@
+import numpy as np
+
+
+array = np.array([1, 2, 3, 4, 5])
+
+# Scalar arithmetic (scalar - single value)
+print(array + 1)  # [2, 3, 4, 5, 6]
+print(array - 2)  # [-1, 0, 1, 2, 3]
+print(array * 3)  # [3, 6, 9, 12, 15]
+print(array / 4)  # [0.25, 0.5, 0.75, 1.0, 1.25]
+print(array ** 5)  # [1, 32, 81, 1024, 3125]
+
+# Vectorized math functions (Vector - single dimensional array)
+
+print(np.sqrt(array))  # [1.0, 1.41421356, 1.73205081, 2.0, 2.23606798]
+print(np.round(array)) # [1, 2, 3, 4, 5] .ceil and .floor are also available
+print(np.pi(array))  # [3.14159265, 6.28318531, 9.42477796, 12.56637061, 15.70796327]
+
+#_________EXERCISE_________
+                # Calculate the area of circles with radii 1, 2, 3, 4, and 5
+radii = np.array([1, 2, 3, 4, 5])
+print(np.pi * radii ** 2)  # [3.14159265, 12.56637061, 28.27433388, 50.26548246, 78.53981634]
+
+# Element-wise operations (Element-wise - multi-dimensional array)  
+array1 = np.array([1, 2, 3])
+array2 = np.array([4, 5, 6])
+print(array1 + array2)  # [5, 7, 9]
+print(array1 - array2)  # [-3, -3, -3]
+print(array1 * array2)  # [4, 10, 18]
+print(array1 / array2)  # [0.25, 0.4, 0.5]
+print(array1 ** array2)  # [1, 4, 27]
+
+# Comparison operators
+scores = np.array([85, 90, 78, 92, 88, 55, 60])
+print(scores > 80)  # [False, True, False, True, True, False, False]
+print(scores == 88) # [False, False, False, False, True, False, False]
+print(scores >= 90) # [False, True, False, True, True, False, False]
+
+scores[scores <= 60] = 0  # Set scores less than or equal to 60 to 0
+print(scores)  # [85, 90, 78, 92, 88, 0, 0]

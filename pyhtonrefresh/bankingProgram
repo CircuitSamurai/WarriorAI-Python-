@@ -1,0 +1,87 @@
+# Banking Program
+
+
+
+
+def show_balance():
+    print("-------------------------")
+    print(f"Your current balance is: ${balance:.2f}")
+    print("-------------------------")
+
+def deposit():
+    global balance
+    print("-------------------------")
+    amount = float(input("Please enter the amount to deposit: $"))
+    print("-------------------------")
+    if amount > 0:
+        balance += amount
+        deposits.append(amount)
+        print("-------------------------")
+        print(f"${amount:.2f} deposited successfully.")
+        print(f"Your new balance is: ${balance:.2f}")
+        print("-------------------------")
+    else:
+        print("-------------------------")
+        print("Invalid amount. Please enter a positive value.")
+        print("-------------------------")
+
+
+def withdraw():
+    global balance
+    print("-------------------------")
+    amount = float(input("Please enter the amount to withdraw: $"))
+    print("-------------------------")
+    if amount > 0 and amount <= balance:
+        balance -= amount
+        withdrawals.append(amount)
+        print("-------------------------")
+        print(f"${amount:.2f} withdrawn successfully.")
+        print(f"Your new balance is: ${balance:.2f}")
+        print("-------------------------")
+    else:
+        print("-------------------------")
+        print("Invalid amount. Please enter a positive value not exceeding your balance.")
+        print("-------------------------")
+
+def choice(option):
+    global is_running 
+    match option:
+        case '1':
+            show_balance()
+        case '2':       
+            deposit()
+        case '3':
+            withdraw()
+        case '4':
+            is_running = False
+            print("Exiting the program. Goodbye!")
+        case _:
+            print("-------------------------")
+            print("Invalid choice. Please try again.")
+            print("-------------------------")
+
+
+
+balance = 0.0
+deposits = []
+withdrawals = []
+is_running = True
+
+while is_running:
+    print("\n-------------------------")
+    print("Banking Program")
+    print("-------------------------")
+    print("1. Show Balance")
+    print("2. Deposit")
+    print("3. Withdraw")
+    print("4. Exit")
+    print("-------------------------")
+
+    option = input("Choose an option (1-4): ")
+    choice(option)
+
+print("-------------------------")
+print("Thank you! have a great day!")
+print("-------------------------")
+
+    

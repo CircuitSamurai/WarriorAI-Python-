@@ -1,0 +1,4 @@
+name = input("Enter your name: ")
+age = float(input("Enter your age: "))
+age = int(age)
+age = age + 1 # typecast age to int first

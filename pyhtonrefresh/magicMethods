@@ -1,0 +1,64 @@
+"""
+Magic Methods (Dunder Methods)
+--------------------------------
+- Methods with double underscores before and after their names
+- Automatically called by Python’s built-in operations
+- Allow developers to customize how objects behave
+"""
+
+class Book:
+
+    # Called automatically when a new Book object is created
+    # Example: book1 = Book("Title", "Author", 300)
+    def __init__(self, title, author, num_pages):
+        self.title = title          # Book title
+        self.author = author        # Book author
+        self.num_pages = num_pages  # Number of pages
+    
+    # Called when the object is converted to a string
+    # Example: print(book1)
+    def __str__(self):
+        return f"'{self.title}' by {self.author}"
+    
+    # Called when using the equality operator (==)
+    # Example: book1 == book2
+    def __eq__(self, other):
+        return self.title == other.title and self.author == other.author
+    
+    # Called when using the less-than operator (<)
+    # Example: book1 < book2
+    def __lt__(self, other):
+        return self.num_pages < other.num_pages
+    
+    # Called when using the greater-than operator (>)
+    # Example: book1 > book2
+    def __gt__(self, other):
+        return self.num_pages > other.num_pages
+    
+    # Called when using the addition operator (+)
+    # Example: book1 + book2
+    def __add__(self, other):
+        return f"{self.num_pages + other.num_pages} pages"
+
+    # Called when using the `in` keyword
+    # Example: "Tolkien" in book1
+    def __contains__(self, keyword):
+        return keyword in self.title or keyword in self.author
+    
+    # Called when using square brackets []
+    # Example: book1["title"]
+    def __getitem__(self, key):
+        if key == "title":
+            return self.title
+        elif key == "author":
+            return self.author
+        elif key == "num_pages":
+            return self.num_pages
+        else:
+            return f"Key {key} was not found"
+        
+
+# Creating Book objects
+book1 = Book("The Hobbit", "J.R.R. Tolkien", 310)
+book2 = Book("Harry Potter and the Philosopher's Stone", "J.K. Rowling", 223)
+book3 = Book("The Lion, The Witch and the Wardrobe", "C.S. Lewis", 172)

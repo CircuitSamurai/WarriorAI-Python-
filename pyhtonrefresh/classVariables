@@ -1,0 +1,30 @@
+"""
+class variables - shared among all instances of a class
+                  Defined outside the constructor
+                  Allow you to share data among all objects created from that class
+"""
+
+class Student:
+    
+    class_year = 2025  # class variable shared by all instances
+    num_students = 0  # another class variable to keep track of number of students
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        Student.num_students += 1  # increment the class variable when a new student is created
+
+student1 = Student("Spongebob", 30)
+student2 = Student("Patrick", 32)
+student3 = Student("Squidward", 35)
+student4 = Student("Mr. Krabs", 50)
+
+print(student1.name)  # Accessing object attributes
+print(student1.age)
+print(Student.class_year)  # Accessing class variable
+print()
+print(student2.name)  # Accessing object attributes
+print(student2.age)
+print(Student.class_year)  # Accessing class variable
+print()
+print(f"Total number of students in class {Student.class_year}: {Student.num_students}")  # Accessing class variable

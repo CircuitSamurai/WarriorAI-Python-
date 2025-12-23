@@ -1,0 +1,17 @@
+""" Keyword Arguments = an argument preceded by an identifier
+                        helps with readability
+                        order of arguments doesnt matter
+                        1. positional 2. default 3. KEYWORD 4. arbitrary
+"""
+
+def hello(greeting, title, first, last):
+    print(f"{greeting} {title}{first} {last}")
+
+hello("Hello", title="Mr.", first="Spongbob", last="Squarepants")
+
+def get_phone(countrty, area, first, last):
+    return f"{countrty}-{area}-{first}-{last}"\
+
+phone_num = get_phone(countrty=1, area=123, first=456, last=7890)
+
+print(phone_num)
