@@ -18,3 +18,6 @@ Data cleaning, manipulation, and exploratory analysis. Each dataset is a battlef
 
 matplotlib/ – The Brush of the Sensei
 Visualizations that capture patterns and trends. Line plots, bar charts, scatter plots, histograms, and multi-plot grids teach me how to convey meaning with clarity.
+
+fastapi/ – The Gateway of the Samurai
+Building APIs with speed and precision. FastAPI allows the samurai to expose their data creations to the outside world—turning logic into services, models into endpoints, and insights into interactive experiences. Here I train to wield async operations, dependency injections, and powerful documentation tools like OpenAPI and Swagger UI.
